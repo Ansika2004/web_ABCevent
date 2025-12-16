@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorand Blockchain Club Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        /* MAIN CONTAINER */
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 1. GREEN HEADER WITH BLACK BORDER */
+        .hero-section {
+            background-color: #4CAF50; /* Green Background */
+            color: white;              /* White text */
+            border: 5px solid black;   /* Black Borderline */
+            padding: 40px 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .hero-section h1 {
+            font-size: 45px;
+            margin-top: 0;
+            font-family: 'Arial Black', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* 2. REGISTER BUTTON (BLACK) */
+        .register-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .register-btn {
+            font-size: 20px;
+            background-color: black;
+            padding: 15px 45px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .register-btn:hover {
+            background-color: #333;
+        }
+
+        /* EVENT DETAILS BOX */
+        .details-box {
+            background-color: #f4f4f4;
+            padding: 25px;
+            border-left: 6px solid #007bff;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .details-box h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #007bff;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .details-box p {
+            margin: 15px 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .details-box span {
+            font-weight: normal;
+            color: #555;
+            margin-left: 10px;
+        }
+
+        /* 3. SOCIAL LINKS */
+        .social-links-container {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        .social-links-container h3 {
+            margin-top: 0;
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .social-links-container a {
+            margin: 0 15px;
+            font-size: 18px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        /* 4. BENEFITS SECTION (NEW & IMPROVED) */
+        .benefits-section {
+            margin: 50px 0;
+            padding: 30px;
+            border: 2px solid #4CAF50; /* Green border */
+            border-radius: 10px;
+            background-color: #f9fff9; /* Very light mint background */
+        }
+
+        .benefits-section h2 {
+            text-align: center;
+            color: #1b5e20;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 8px solid #4CAF50; /* Thick green accent */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .icon {
+            font-size: 25px;
+            margin-right: 15px;
+            min-width: 30px;
+        }
+
+        .benefit-text strong {
+            display: block;
+            font-size: 20px;
+            color: #2e7d32;
+            margin-bottom: 5px;
+        }
+
+        .benefit-text p {
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* ABOUT SECTION */
+        .about-section {
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .about-section h1 {
+            font-family: 'Arial Black', sans-serif;
+            color: #333;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #444;
+        }
+
+        /* FOOTER */
+        .inspiration-box {
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .inspiration-box a {
+            color: #4CAF50;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* --- MOBILE FIXES --- */
+        @media screen and (max-width: 600px) {
+            .hero-section {
+                padding: 30px 20px;
+                border-width: 4px;
+            }
+            
+            .hero-section h1 {
+                font-size: 30px; 
+                line-height: 1.2;
+            }
+            
+            .hero-section p {
+                font-size: 16px;
+            }
+
+            .main-container {
+                padding: 15px;
+            }
+
+            .register-btn {
+                width: 100%;
+                box-sizing: border-box; 
+            }
+            
+            .benefits-list li {
+                flex-direction: column;
+            }
+            
+            .icon {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="hero-section">
+            <h1>Algorand Blockchain Club's Event</h1>
+            <p>
+                Students should join this event to gain hands-on experience, expand their knowledge, and connect with like-minded people.<br><br>
+                The event offers an interactive environment where participants can learn from experts, work on real-world challenges, and develop practical skills that go beyond textbooks. It is also a great opportunity to enhance teamwork, communication, and problem-solving abilities while building a strong network.
+            </p>
+        </div>
+
+        <div class="register-container">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8Drch0d_yvVtrVppb3WlbemR2b9crhNFiU5Xgu96tLPAELA/viewform?usp=header" class="register-btn">Register Now</a>
+        </div>
+
+        <div class="details-box">
+            <h2>Event Details</h2>
+            <p>Date: <span>December 24th, 2025</span></p>
+            <p>Time: <span>12:00 PM - 16:00 PM</span></p>
+            <p>Venue: <span>Main Auditorium, 5th Floor</span></p>
+            <p>Registration: <span>Free for all students</span></p>
+        </div>
+
+        <div class="social-links-container">
+            <h3>Connect With Us</h3>
+            <a href="https://www.instagram.com/abc.cit?igsh=MWdxYjJwdzQ1cW1jbA==" target="_blank">Social</a>
+            <a href="https://www.linkedin.com/company/algorand-blockchain-club-cit/" target="_blank">Follow us</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8Drch0d_yvVtrVppb3WlbemR2b9crhNFiU5Xgu96tLPAELA/viewform?usp=header" target="_blank">Join now</a>
+        </div>
+
+        <div class="benefits-section">
+            <h2>🚀 Why You Should Join the ABC Club</h2>
+            <ul class="benefits-list">
+                <li>
+                    <div class="icon">💼</div>
+                    <div class="benefit-text">
+                        <strong>Career Opportunities & Internships</strong>
+                        <p>Get exclusive access to internship openings and job fairs within the blockchain ecosystem. We connect top performing students directly with hiring companies.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">🏆</div>
+                    <div class="benefit-text">
+                        <strong>Win Prizes in Global Hackathons</strong>
+                        <p>Participate in Algorand's global hackathons. Our club provides mentorship to help you win cash prizes, funding for your startup ideas, and global recognition.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">📜</div>
+                    <div class="benefit-text">
+                        <strong>Earn Verified Certifications</strong>
+                        <p>Boost your resume with official developer certifications from the Algorand Foundation. Prove your skills to future employers with recognized credentials.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">🤝</div>
+                    <div class="benefit-text">
+                        <strong>Networking with Industry Experts</strong>
+                        <p>Don't just learn from textbooks. Meet and interact with industry leaders, founders, and blockchain experts through our exclusive webinars and meetups.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">⚡</div>
+                    <div class="benefit-text">
+                        <strong>Hands-On Web3 Experience</strong>
+                        <p>Learn by doing. Deploy your first smart contract, mint your own NFTs, and build real Decentralized Apps (DApps) with zero transaction costs on the testnet.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h1>What our club is about?</h1>
+            <p>
+               Welcome to ABC Club, a vibrant community driven by innovation, collaboration, and creativity. ABC Club is dedicated to providing students with opportunities to learn beyond the classroom through engaging events, hands-on workshops, and impactful initiatives. Our goal is to nurture skills, encourage leadership, and inspire members to explore new ideas while working together as a team.
+            </p>
+        </div>
+
+        <div class="inspiration-box">
+            <p>Inspired from <a href="https://algorandtechnologies.com/" target="_blank">https://algorandtechnologies.com/</a></p>
+        </div>
+
+    </div>
+
+</body>
+</html>
